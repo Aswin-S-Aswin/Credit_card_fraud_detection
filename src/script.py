@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-# Define paths to the scripts
+
 BASE_DIR = os.path.dirname(__file__)
 DATA_PREPROCESSING_SCRIPT = os.path.join(BASE_DIR, 'data_preprocessing.py')
 MODEL_TRAINING_SCRIPT = os.path.join(BASE_DIR, 'model_training.py')
@@ -19,16 +19,16 @@ def run_script(script_path):
 def main():
     print("Starting the pipeline...")
     
-    # Step 1: Preprocess the data
+    # Preprocess the data
     run_script(DATA_PREPROCESSING_SCRIPT)
     
-    # Step 2: Train the model
+    # Train the model
     run_script(MODEL_TRAINING_SCRIPT)
     
-    # Step 3: Evaluate the model
+    # Evaluate the model
     run_script(MODEL_EVALUATION_SCRIPT)
     
-    # Step 4: Run inference (optional, for testing purposes)
+    # Run inference (optional, for testing purposes)
     print("\nYou can now run the inference script manually if needed:")
     print(f"python {INFERENCE_SCRIPT}")
 
